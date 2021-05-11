@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
+import { differenceInCalendarDays } from "date-fns";
 
 import Footer from "../components/footer";
 import Header from "../components/header";
@@ -70,8 +71,10 @@ const CoachName = styled.span`
 `;
 
 const Index = () => {
-  // TODO: calculate number of days from date
-  const daysInCharge = "999";
+  const daysInCharge = differenceInCalendarDays(
+    new Date(),
+    new Date(2020, 7, 8, 0, 0) // 08/08/2020
+  );
 
   return (
     <>
