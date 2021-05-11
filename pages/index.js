@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
 
+import Header from "../components/header";
+
 const GlobalStyle = createGlobalStyle`
   html,
   body {
@@ -38,7 +40,7 @@ const Index = () => {
       </Head>
 
       <div>
-        <header>{/* Logo */}</header>
+        <Header />
         <main>
           <p>
             <CoachName>Andrea Pirlo</CoachName> è l’allenatore della Juventus da{" "}
