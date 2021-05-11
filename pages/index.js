@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
 
+import Footer from "../components/footer";
 import Header from "../components/header";
 
 const GlobalStyle = createGlobalStyle`
@@ -47,7 +48,7 @@ const Index = () => {
             {daysInCharge} giorni
           </p>
         </main>
-        <footer>{/* Notice, hashtag */}</footer>
+        <Footer />
       </div>
     </>
   );
