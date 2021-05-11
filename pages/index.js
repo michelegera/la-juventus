@@ -5,6 +5,22 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+      font-family: "Roboto";
+      src: url("/fonts/Roboto/Roboto-Regular.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+  }
+
+  @font-face {
+    font-family: "JuventusFans";
+    src: url("/fonts/JuventusFans/JuventusFans-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
   html,
   body {
     padding: 0;
