@@ -54,6 +54,7 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 `;
 
 const Content = styled.p`
