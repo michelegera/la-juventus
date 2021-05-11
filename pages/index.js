@@ -23,6 +23,16 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
+
+const Main = styled.main`
+  flex: 1;
+`;
+
 const CoachName = styled.span`
   font-weight: bold;
 `;
@@ -40,16 +50,16 @@ const Index = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
+      <Container>
         <Header />
-        <main>
+        <Main>
           <p>
             <CoachName>Andrea Pirlo</CoachName> è l’allenatore della Juventus da{" "}
             {daysInCharge} giorni
           </p>
-        </main>
+        </Main>
         <Footer />
-      </div>
+      </Container>
     </>
   );
 };
