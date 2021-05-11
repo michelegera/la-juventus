@@ -80,6 +80,19 @@ const Index = () => {
       <Head>
         <title>Chi allena la Juventus?</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <link
+          rel="preload"
+          href="/fonts/Roboto/Roboto-Regular.woff2"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/JuventusFans/JuventusFans-Bold.woff2"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
 
       <Container>
