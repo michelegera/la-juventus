@@ -25,8 +25,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font: 16px/1.4 "Roboto", sans-serif;
   }
 
   a {
@@ -36,6 +35,10 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4, h5, h5 {
+    font-family: "JuventusFans", sans-serif
   }
 `;
 
@@ -51,6 +54,7 @@ const Main = styled.main`
 
 const CoachName = styled.span`
   font-weight: bold;
+  font-family: "JuventusFans", sans-serif;
 `;
 
 const Index = () => {
