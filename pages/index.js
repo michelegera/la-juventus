@@ -50,11 +50,22 @@ const Container = styled.div`
 
 const Main = styled.main`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Content = styled.p`
+  text-align: center;
 `;
 
 const CoachName = styled.span`
   font-weight: bold;
   font-family: "JuventusFans", sans-serif;
+  text-transform: uppercase;
+  font-size: 4.209rem;
+  display: block;
 `;
 
 const Index = () => {
@@ -73,10 +84,10 @@ const Index = () => {
       <Container>
         <Header />
         <Main>
-          <p>
+          <Content>
             <CoachName>Andrea Pirlo</CoachName> è l’allenatore della Juventus da{" "}
             {daysInCharge} giorni
-          </p>
+          </Content>
         </Main>
         <Footer />
       </Container>
