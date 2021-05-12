@@ -1,8 +1,8 @@
-import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
 import { differenceInCalendarDays } from "date-fns";
 
 import Footer from "../components/footer";
+import Head from "../components/head";
 import Header from "../components/header";
 
 const GlobalStyle = createGlobalStyle`
@@ -93,28 +93,10 @@ const Index = () => {
     <>
       <GlobalStyle />
 
-      <Head>
-        <title>Chi allena la Juventus?</title>
-        <link rel="icon" href="/favicon.ico" />
-
-        <link
-          rel="preload"
-          href="/fonts/Roboto/Roboto-Regular.woff2"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/JuventusFans/JuventusFans-Bold.woff2"
-          as="font"
-          crossOrigin=""
-        />
-
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-      </Head>
+      <Head
+        description="Per essere sempre aggiornato sul nome dell’attuale allenatore dei Bianconeri"
+        title="Chi allena la Juventus?"
+      />
 
       <Container>
         <Header />
