@@ -16,5 +16,9 @@ export const Container = styled.header`
 `;
 
 export const Logo = styled(J)`
-  width: 48px;
+  width: 24px;
+
+  @media (min-width: 768px) {
+    width: 48px;
+  }
 `;
