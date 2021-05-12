@@ -18,7 +18,15 @@ export const Container = styled.header`
 export const Logo = styled(J)`
   width: 24px;
 
+  #logo-type {
+    visibility: hidden;
+  }
+
   @media (min-width: 768px) {
     width: 48px;
+
+    #logo-type {
+      visibility: visible;
+    }
   }
 `;
