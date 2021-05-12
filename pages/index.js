@@ -55,7 +55,11 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
+
+  @media (min-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 const Content = styled.p`
