@@ -95,7 +95,9 @@ const Index = () => {
 
       <Head
         description="Per essere sempre aggiornato sul nome dell’attuale allenatore dei Bianconeri"
+        image="/opengraph.png"
         title="Chi allena la Juventus?"
+        url={process.env.NEXT_PUBLIC_URL}
       />
 
       <Container>
