@@ -75,6 +75,8 @@ const Content = styled.p`
   text-align: center;
 `;
 
+const Photo = styled.img``;
+
 const CoachName = styled.span`
   font-weight: bold;
   font-family: "JuventusFans", sans-serif;
@@ -83,10 +85,13 @@ const CoachName = styled.span`
   display: block;
 `;
 
-const Index = () => {
+const Index = ({
+  currentCoach: { career, firstname, lastname, name, photo },
+}) => {
+  const currentJob = career.find((job) => !job.end);
   const daysInCharge = differenceInCalendarDays(
     new Date(),
-    new Date(2020, 7, 8, 0, 0) // 08/08/2020
+    new Date(currentJob.start)
   );
 
   return (
@@ -104,8 +109,11 @@ const Index = () => {
         <Header />
         <Main>
           <Content>
-            <CoachName>Andrea Pirlo</CoachName> è l’allenatore della Juventus da{" "}
-            {daysInCharge} giorni
+            <Photo src={photo} alt={name} />
+            <CoachName>
+              {firstname} {lastname}
+            </CoachName>{" "}
+            è l’allenatore la Juventus da {daysInCharge} giorni
           </Content>
         </Main>
         <Footer />
@@ -113,5 +121,37 @@ const Index = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const res = await fetch(
+    `https://${process.env.API_HOST}/coachs?team=${process.env.TEAM_ID}`,
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-host": process.env.API_HOST,
+        "x-rapidapi-key": process.env.API_KEY,
+      },
+    }
+  );
+
+  const { response } = await res.json();
+
+  if (!response) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const currentCoach = response.find((coach) =>
+    // if his job doesn’t have a end date, he’s in charge!
+    coach.career.find((job) => !job.end)
+  );
+
+  return {
+    props: {
+      currentCoach,
+    },
+  };
+}
 
 export default Index;
