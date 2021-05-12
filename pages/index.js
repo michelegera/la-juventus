@@ -1,4 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
+import path from "path";
+import { readFile } from "fs/promises";
 
 import CurrentCoach from "../components/current-coach";
 import Footer from "../components/footer";
@@ -95,26 +97,35 @@ const Index = ({ currentCoach }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch(
-    `https://${process.env.API_HOST}/coachs?team=${process.env.TEAM_ID}`,
-    {
-      method: "GET",
-      headers: {
-        "x-rapidapi-host": process.env.API_HOST,
-        "x-rapidapi-key": process.env.API_KEY,
-      },
-    }
-  );
+  let data;
 
-  const { response } = await res.json();
+  if (process.env.NODE_ENV === "production") {
+    const res = await fetch(
+      `https://${process.env.API_HOST}/coachs?team=${process.env.TEAM_ID}`,
+      {
+        method: "GET",
+        headers: {
+          "x-rapidapi-host": process.env.API_HOST,
+          "x-rapidapi-key": process.env.API_KEY,
+        },
+      }
+    );
 
-  if (!response) {
+    data = await res.json();
+  } else {
+    const filePath = path.join(process.cwd(), "data", "coachs.json");
+    const fileContent = await readFile(filePath, "utf8");
+
+    data = JSON.parse(fileContent);
+  }
+
+  if (!data) {
     return {
       notFound: true,
     };
   }
 
-  const currentCoach = response.find((coach) =>
+  const currentCoach = data.response.find((coach) =>
     // if his job doesn’t have a end date, he’s in charge!
     coach.career.find((job) => !job.end)
   );

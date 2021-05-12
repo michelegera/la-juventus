@@ -1,0 +1,141 @@
+{
+  "get": "coachs",
+  "parameters": {
+    "team": "496"
+  },
+  "errors": [],
+  "results": 2,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "id": 3386,
+      "name": "M. Allegri",
+      "firstname": "Massimiliano",
+      "lastname": "Allegri",
+      "age": 52,
+      "birth": {
+        "date": "1967-08-11",
+        "place": "Livorno",
+        "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "183 cm",
+      "weight": null,
+      "photo": "https:\/\/media.api-sports.io\/football\/coachs\/3386.png",
+      "team": {
+        "id": 496,
+        "name": "Juventus",
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/496.png"
+      },
+      "career": [
+        {
+          "team": {
+            "id": 496,
+            "name": "Juventus",
+            "logo": "https:\/\/media.api-sports.io\/football\/teams\/496.png"
+          },
+          "start": "2014-07-16",
+          "end": "2019-06-30"
+        },
+        {
+          "team": {
+            "id": 489,
+            "name": "Milan",
+            "logo": "https:\/\/media.api-sports.io\/football\/teams\/489.png"
+          },
+          "start": "2010-07-12",
+          "end": "2014-01-13"
+        },
+        {
+          "team": {
+            "id": 490,
+            "name": "Cagliari",
+            "logo": "https:\/\/media.api-sports.io\/football\/teams\/490.png"
+          },
+          "start": "2008-07-01",
+          "end": "2010-04-13"
+        },
+        {
+          "team": {
+            "id": 488,
+            "name": "Sassuolo",
+            "logo": "https:\/\/media.api-sports.io\/football\/teams\/488.png"
+          },
+          "start": "2007-07-17",
+          "end": "2008-05-28"
+        },
+        {
+          "team": {
+            "id": 9499,
+            "name": "Grosseto",
+            "logo": "https:\/\/media.api-sports.io\/football\/teams\/9499.png"
+          },
+          "start": "2006-04-17",
+          "end": "2006-10-29"
+        },
+        {
+          "team": {
+            "id": 9499,
+            "name": "Grosseto",
+            "logo": "https:\/\/media.api-sports.io\/football\/teams\/9499.png"
+          },
+          "start": "2005-07-19",
+          "end": "2005-10-26"
+        },
+        {
+          "team": {
+            "id": 493,
+            "name": "SPAL",
+            "logo": "https:\/\/media.api-sports.io\/football\/teams\/493.png"
+          },
+          "start": "2004-07-01",
+          "end": "2005-05-30"
+        }
+      ]
+    },
+    {
+      "id": 12778,
+      "name": "A. Pirlo",
+      "firstname": "Andrea",
+      "lastname": "Pirlo",
+      "age": 42,
+      "birth": {
+        "date": "1979-05-19",
+        "place": "Flero",
+        "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "175 cm",
+      "weight": "68 kg",
+      "photo": "https:\/\/media.api-sports.io\/football\/coachs\/12778.png",
+      "team": {
+        "id": 496,
+        "name": "Juventus",
+        "logo": "https:\/\/media.api-sports.io\/football\/teams\/496.png"
+      },
+      "career": [
+        {
+          "team": {
+            "id": 496,
+            "name": "Juventus",
+            "logo": "https:\/\/media.api-sports.io\/football\/teams\/496.png"
+          },
+          "start": "2020-08-01",
+          "end": null
+        },
+        {
+          "team": {
+            "id": 1715,
+            "name": "Juventus II",
+            "logo": "https:\/\/media.api-sports.io\/football\/teams\/1715.png"
+          },
+          "start": "2020-07-01",
+          "end": "2020-08-01"
+        }
+      ]
+    }
+  ]
+}
