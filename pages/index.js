@@ -100,6 +100,11 @@ const Index = () => {
           as="font"
           crossOrigin=""
         />
+
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
       <Container>
