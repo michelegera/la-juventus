@@ -29,6 +29,12 @@ const GlobalStyle = createGlobalStyle`
     font: 16px/1.4 "Roboto", sans-serif;
   }
 
+  html,
+  body,
+  #__next {
+    height: -webkit-fill-available;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
@@ -46,7 +52,10 @@ const GlobalStyle = createGlobalStyle`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+
+  /* Mobile Safari viewport fix */
+  min-height: -webkit-fill-available;
 `;
 
 const Main = styled.main`
