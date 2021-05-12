@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { differenceInCalendarDays } from "date-fns";
 
+import CurrentCoach from "../components/current-coach";
 import Footer from "../components/footer";
 import Head from "../components/head";
 import Header from "../components/header";
@@ -71,29 +71,7 @@ const Main = styled.main`
   }
 `;
 
-const Content = styled.p`
-  text-align: center;
-`;
-
-const Photo = styled.img``;
-
-const CoachName = styled.span`
-  font-weight: bold;
-  font-family: "JuventusFans", sans-serif;
-  text-transform: uppercase;
-  font-size: 4.209rem;
-  display: block;
-`;
-
-const Index = ({
-  currentCoach: { career, firstname, lastname, name, photo },
-}) => {
-  const currentJob = career.find((job) => !job.end);
-  const daysInCharge = differenceInCalendarDays(
-    new Date(),
-    new Date(currentJob.start)
-  );
-
+const Index = ({ currentCoach }) => {
   return (
     <>
       <GlobalStyle />
@@ -108,13 +86,7 @@ const Index = ({
       <Container>
         <Header />
         <Main>
-          <Content>
-            <Photo src={photo} alt={name} />
-            <CoachName>
-              {firstname} {lastname}
-            </CoachName>{" "}
-            è l’allenatore la Juventus da {daysInCharge} giorni
-          </Content>
+          <CurrentCoach coach={currentCoach} />
         </Main>
         <Footer />
       </Container>
