@@ -1,8 +1,8 @@
 name: trigger-build
 on:
   schedule:
-    # every day at 6am
-    - cron: "0 6 * * *"
+    # every day at 4am UTC
+    - cron: "0 4 * * *"
 jobs:
   cron:
     runs-on: ubuntu-latest
