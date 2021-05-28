@@ -134,6 +134,9 @@ export async function getStaticProps() {
     props: {
       currentCoach,
     },
+    // Re-fetch data at most every 15 minutes (= 96 times/day), therefore
+    // ensuring to stay under the 100 requests/day limit of the free tier.
+    revalidate: 15 * 60,
   };
 }
 
