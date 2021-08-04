@@ -125,10 +125,9 @@ export async function getStaticProps() {
     };
   }
 
-  const currentCoach = data.response.find((coach) =>
-    // if his job doesn’t have a end date, he’s in charge!
-    coach.career.find((job) => !job.end)
-  );
+  // FIXME: Dirty hack! Since the APIs are outdated, we just grab the first
+  // coach, who happens to be the current one…
+  const currentCoach = data.response[0];
 
   return {
     props: {

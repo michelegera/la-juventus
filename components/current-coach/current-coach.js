@@ -6,12 +6,6 @@ import * as S from "./current-coach.styles";
 const CurrentCoach = ({
   coach: { career, firstname, lastname, name, photo },
 }) => {
-  const currentJob = career.find((job) => !job.end);
-  const daysInCharge = differenceInCalendarDays(
-    new Date(),
-    new Date(currentJob.start)
-  );
-
   return (
     <S.Wrapper>
       <S.Photo src={photo} alt={name} />
@@ -19,7 +13,7 @@ const CurrentCoach = ({
         <S.Name>
           {firstname} {lastname}
         </S.Name>{" "}
-        è l’allenatore della Juventus da {daysInCharge} giorni
+        è l’attuale allenatore della Juventus.
       </S.Text>
     </S.Wrapper>
   );
